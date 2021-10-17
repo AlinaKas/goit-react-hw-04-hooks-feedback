@@ -3,18 +3,17 @@ import PropTypes from 'prop-types';
 import s from './FeedbackOptions.module.css';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
-  const buttons = Object.keys(options);
   return (
     <>
-      {buttons.map(button => (
+      {options.map(option => (
         <button
-          className={`${s[button]}`}
-          key={button}
-          name={button}
+          className={`${s[option]}`}
+          key={option}
+          name={option}
           type="button"
           onClick={onLeaveFeedback}
         >
-          {button[0].toUpperCase() + button.slice(1)}
+          {option[0].toUpperCase() + option.slice(1)}
         </button>
       ))}
     </>
