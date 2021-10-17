@@ -1,0 +1,32 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.item {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.item:not(last-child) {
+  margin-bottom: 5px;
+}
+
+.good, .positive {
+  composes: item;
+  color: rgb(2, 122, 24);
+}
+
+.neutral {
+  composes: item;
+  color:rgb(1, 85, 141);
+}
+
+.bad {
+composes: item;
+color:rgb(156, 18, 0);
+}
+
+
+
